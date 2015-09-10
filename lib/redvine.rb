@@ -93,7 +93,7 @@ class Redvine
 
   def post_comments(pid)
     raise(ArgumentError, 'You must specify a post id') if !pid
-    response = get_request_data("/timelines/posts/#{pid}/comments")
+    response = get_request_data("/posts/#{pid}/comments")
     return response.kind_of?(Array) ? response.first : response
   end
 
