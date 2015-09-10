@@ -4,7 +4,7 @@ A simple Ruby wrapper for the totally unofficial and undocumented [Vine](http://
 
 Very heavily inspired by [Vino](https://github.com/tlack/vino), and made possible by the super sleuthing documented on [khakimov.com](http://khakimov.com/blog/2013/03/12/vines-undocumented-api/).
 
-It pretty much goes without saying that this wasn't authorized by Vine or anyone who works at Vine, so don't blame me if you try to use it and Vine gets mad at you. 
+It pretty much goes without saying that this wasn't authorized by Vine or anyone who works at Vine, so don't blame me if you try to use it and Vine gets mad at you.
 
 Thanks also to [@kdonovan](https://github.com/kdonovan) and [@ruthgsp](https://github.com/ruthgsp) for adding and improving.
 
@@ -29,9 +29,9 @@ Thanks also to [@kdonovan](https://github.com/kdonovan) and [@ruthgsp](https://g
     client.search('cats')
     client.search('cats', :page => 2)
 
-    # Find user profiles by user ID 
+    # Find user profiles by user ID
     client.user_profile('908082141764657152')
-    
+
     # Get liked Vines by a user's ID
     client.user_likes('908082141764657152')
 
@@ -48,9 +48,12 @@ Thanks also to [@kdonovan](https://github.com/kdonovan) and [@ruthgsp](https://g
     client.popular(:page => 2)
     client.promoted
     client.promoted(:page => 2)
-    
+
     # Get a single video by the post ID
     client.single_post('1015405623653113856')
+
+    # Get comments from a single video by the post ID
+    client.post_comments('1015405623653113856')
 
 ## Things To Do
 
