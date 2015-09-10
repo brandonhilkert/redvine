@@ -91,10 +91,9 @@ class Redvine
     return response.kind_of?(Array) ? response.first : response
   end
 
-  def post_comments(pid)
+  def post_comments(pid, opts={})
     raise(ArgumentError, 'You must specify a post id') if !pid
-    response = get_request_data("/posts/#{pid}/comments")
-    return response.kind_of?(Array) ? response.first : response
+    get_request_data("/posts/#{pid}/comments", opts)
   end
 
   private
